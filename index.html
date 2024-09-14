@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Burguer Delicious</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          class="w-32 h-32 rounded-md"
+          src="./assets/hamb-1.png"
+          alt="Logo Burguer"
+        />
+        <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Burguer Delicious</h1>
+        <span class="text-white text-sm font-medium"
+          ><i class="fa-solid fa-location-dot fa-xs"></i> Rua Cajueiro 50, Recife - PE</span
+        >
+
+        <div id="date-span" class="bg-green-600 px-4 py-1 rounded-lg mt-5">
+          <span class="text-white font-semibold">Aberto Agora</span>
+        </div>
+        <span class="mt-2 text-white text-sm font-semibold"><i class="fa-regular fa-clock fa-xs"></i> Seg á Dom - 18:00 as 22:00</span>
+      </div>
+    </header>
+    <!--Fim Header-->
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-4 mb-4">
+      Conheça nosso Menu</h2>
+    <!--Inicio Menu-->
+    <div id="menu">
+      <hr class="max-auto max-w-7xl mb-4 mx-4 md:mx-14">
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 mx-5 md:mx-14 max-w-7xl"
+      >
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-0.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+          <div>
+            <p class="font-bold">Hamburguer Smash</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, burguer smash 150g,
+              queijo prato e maionese da casa.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 18,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Smash"
+                data-price="18,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-2.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div>
+            <p class="font-bold">Smash Double Bacon</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, dois burguer smash de
+              150g, queijo cheddar, bacon e maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 25,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Smash Double Bacon"
+                data-price="25,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-3.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div>
+            <p class="font-bold">Smash Double Egg</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, dois burguer smash de
+              150g, queijo cheddar, 2 ovos e maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 15,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Smash Dougle Egg"
+                data-price="15,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-4.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div>
+            <p class="font-bold">Chicken Choice Burguer</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, frango empanado 250g,
+              verdura e maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Chicken Choice Burguer"
+                data-price="29,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-5.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div>
+            <p class="font-bold">Smash Double Chesse</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, dois burguer smash de
+              150g, queijo prato, verdura e maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 24,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Smash Double Chesse"
+                data-price="24,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-6.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div>
+            <p class="font-bold">Blend Monster Burguer</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, burguer blend 250g,
+              queijo prato, verdura e maionese da casa, acompanhado com uma
+              batata M.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 34,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Blend Monster Burguer"
+                data-price="34,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-7.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div>
+            <p class="font-bold">Onion Cheddar Burguer</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, burguer Blend 150g,
+              queijo cheddar, cebola caramelizada e Onion Rings.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Onion Cheddar Burguer"
+                data-price="29,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-8.png"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div>
+            <p class="font-bold">Salada Burguer</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural de trigo, mix de folhas e
+              verduras, molho especial da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 18,90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Salada Burguer"
+                data-price="18,90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="max-auto max-w-7xl my-10 mx-4 md:mx-14">
+      <h2 class="font-bold text-3xl">Bebidas</h2>
+      <hr>
+    </div>
+
+    <div
+      id="menuBebidas"
+      class="grid grid-cols-1 md:grid-cols-2 gap-7 mx-5 md:mx-14 max-w-7xl"
+    >
+      <div class="flex gap-2">
+        <img
+          src="./assets/refri-1.png"
+          alt="Coca Cola Lata"
+          class="w-28 h-28 rounded-md"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Coca Cola Lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,90</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Coca Cola Lata"
+              data-price="6,90"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2 mb-14">
+        <img
+          src="./assets/refri-2.png"
+          alt="Guaraná Lata"
+          class="w-28 h-28 rounded-md"
+        />
+
+        <div class="w-full">
+          <p class="font-bold">Guaraná Lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 5,90</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Guaraná Lata"
+              data-price="5,90"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fim Menu-->
+
+    <div
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden justify-center items-center"
+      id="cart-modal"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+          <p class="font-bold">Total: <span id="cart-total">0,00</span></p>
+          <p class="font-bold mt-4">Endereço de entrega:</p>
+          <input
+            type="text"
+            placeholder="Digite seu endereço completo..."
+            id="address"
+            class="w-full border-2 p-1 rounded my-1"
+          />
+          <p class="text-red-500 hidden" id="address-warn" >Digite seu endereço completo!</p>
+
+          <p class="font-bold mt-2">Nome:</p>
+          <input
+            type="text"
+            placeholder="Digite seu nome completo..."
+            id="nameuser"
+            class="w-full border-2 p-1 rounded my-1"
+          />
+          <p class="font-bold mt-2">Forma de Pagamento:</p>
+          <select id="payment">
+            <option value="select">Selecione</option>
+            <option value="Pix">Pix</option>
+            <option value="Cartão">Cartão</option>
+            <option value="Dinheiro">Dinheiro</option>
+          </select>
+          <p class="text-red-500 hidden" id="paymentselector" >Escolha uma forma de pagamento</p>
+          <div class="flex items-center justify-between mt-5 w-full">
+            <button class="font-semibold" id="close-modal-btn">Fechar</button>
+            <button
+              id="checkout-btn"
+              class="bg-green-500 text-white px-4 py-1 rounded font-semibold"
+            >
+              Finalizar pedido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="w-full bg-red-500 py-2 fixed bottom-0 flex items-center justify-center rounded-t-full"
+    >
+      <button
+        id="cart-btn"
+        class="flex items-center gap-2 text-white font-bold"
+      >
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+        Ver Carrinho<span id="cart-count" class="relative text-xs bg-orange-400 px-1 rounded-full bottom-1 right-2">0</span>
+      </button>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
