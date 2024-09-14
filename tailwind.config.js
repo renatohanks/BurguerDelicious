@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     fontSize: {
       xs: "0.5rem",
@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        home: "url('./assets/bg.png')",
+        home: "url('/assets/bg.png')",
       },
       padding: {
         "3px": "3px",
