@@ -169,7 +169,8 @@ checkoutBtn.addEventListener("click", function () {
 
   const cartItems = cart
     .map((item) => {
-      return `${item.name}
+      return `
+        ${item.name}
         Quantidade: ${item.quantity}
         Preço: R$${item.price}`;
     })
@@ -178,10 +179,7 @@ checkoutBtn.addEventListener("click", function () {
   const message = encodeURIComponent(cartItems);
   const phone = "+5581986068744";
   window.open(
-    `https://wa.me/${phone}?text=${message}
-    Endereço: ${addressInput.value}
-    Nome: ${nameUser.value}
-    Pagamento: ${paymentOption}`,
+    `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value} Nome: ${nameUser.value} Pagamento: ${paymentOption}`,
     "_blank"
   );
 
