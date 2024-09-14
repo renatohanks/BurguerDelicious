@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        home: "url('./assets/favicon.png')",
+        home: "url(/assets/bg.png)",
       },
       padding: {
         "3px": "3px",
