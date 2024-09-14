@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <script>
       tailwind.config = {
-        content: ["./*.{html,js}"],
+        content: ["*.{html,js}"],
         theme: {
           fontSize: {
             xs: "0.5rem",
@@ -39,7 +39,7 @@
           },
           extend: {
             backgroundImage: {
-              home: "url('/assets/bg.png')",
+              home: "url('./assets/bg.png')",
             },
             padding: {
               "3px": "3px",
