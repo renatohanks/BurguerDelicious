@@ -171,8 +171,9 @@ checkoutBtn.addEventListener("click", function () {
     .map((item) => {
       return `
         ${item.name}
-        Quantidade: ${item.quantity}
-        Preço: R$${item.price}`;
+        Qtd: ${item.quantity}
+        Preço: R$${item.price}
+      `;
     })
     .join("");
 
