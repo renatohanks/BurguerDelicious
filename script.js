@@ -183,7 +183,7 @@ checkoutBtn.addEventListener("click", function () {
 https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value} Nome: ${nameUser.value} Pagamento: ${paymentOption}`,
     "_blank"
   );
-
+  inputValue = "";
   cart = [];
   updateCartModal();
 });
