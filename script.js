@@ -178,13 +178,25 @@ checkoutBtn.addEventListener("click", function () {
 
   const message = encodeURIComponent(cartItems);
   const phone = "+5581986068744";
-  addressInput.value;
-  nameUser.value;
-  const url = "https://wa.me/" + phone + "?text="
-    + "*Nome:* " +nameUser+"%0a"
-    + "*Endreço:* " +addressInput+"%0a"
-    + "*Pagamento:* " +paymentOption+"%0a";
-  window.open(message, url, "_blank").focus();
+  const url =
+    "https://wa.me/" +
+    phone +
+    "?text=" +
+    message +
+    "%0a" +
+    "*Nome:* " +
+    nameUser.value +
+    "%0a" +
+    "*Endreço:* " +
+    addressInput.value +
+    "%0a" +
+    "*Pagamento:* " +
+    paymentOption +
+    "%0a";
+  window.open(url, "_blank").focus();
+  cart = [];
+  updateCartModal();
+});
   
   cart = [];
   updateCartModal();
