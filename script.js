@@ -169,13 +169,11 @@ checkoutBtn.addEventListener("click", function () {
 
   const cartItems = cart
     .map((item) => {
-      return 
-        `
+      return (`
         *${item.name}*
         *Qtd:* ${item.quantity}
-        *Preço:* R$${item.price}
-        
-`}).join("");
+        *Preço:* R$${item.price}`)
+  }).join("");
 
   const message = encodeURIComponent(cartItems);
   const phone = "+5581986068744";
