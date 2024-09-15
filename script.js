@@ -169,10 +169,11 @@ checkoutBtn.addEventListener("click", function () {
 
   const cartItems = cart
     .map((item) => {
-      return `${item.name}
-        Qtd: ${item.quantity}
-        Preço: R$${item.price}
-        `;
+      return `
+*${item.name}* 
+*Qtd:* ${item.quantity} 
+*Preço:* R$${item.price.toFixed(2)}
+      `;
     })
     .join("");
 
@@ -182,7 +183,13 @@ checkoutBtn.addEventListener("click", function () {
     "https://wa.me/" +
     phone +
     "?text=" +
+    "*Pedido:* " +
+    "%0a" +
     message +
+    "%0a" +
+    "*Total:* " +
+    cartTotal.textContent +
+    "%0a" +
     "%0a" +
     "*Nome:* " +
     nameUser.value +
@@ -194,10 +201,7 @@ checkoutBtn.addEventListener("click", function () {
     paymentOption +
     "%0a";
   window.open(url, "_blank").focus();
-  cart = [];
-  updateCartModal();
-});
-  
+
   cart = [];
   updateCartModal();
 });
