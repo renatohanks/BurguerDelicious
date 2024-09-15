@@ -181,7 +181,7 @@ checkoutBtn.addEventListener("click", function () {
   window.open(
     `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value} Nome: ${nameUser.value} Pagamento: ${paymentOption}`,
     "_blank"
-  );
+  ).focus();
 
   cart = [];
   updateCartModal();
