@@ -7,10 +7,10 @@ const cartTotal = document.getElementById("cart-total");
 const checkoutBtn = document.getElementById("checkout-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCounter = document.getElementById("cart-count");
-const addressInput = document.getElementById("address");
+const addressInput = document.getElementById("address").value;
 const addressWarn = document.getElementById("address-warn");
 const payment = document.getElementById("payment");
-const nameUser = document.getElementById("nameuser");
+const nameUser = document.getElementById("nameuser").value;
 const paymentSelector = document.getElementById("paymentselector");
 
 let cart = [];
@@ -178,11 +178,12 @@ checkoutBtn.addEventListener("click", function () {
 
   const message = encodeURIComponent(cartItems);
   const phone = "+5581986068744";
-  window.open(
-    `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value} Nome: ${nameUser.value} Pagamento: ${paymentOption}`,
-    "_blank"
-  ).focus();
-
+  const url = "https://wa.me/" + phone + "?text="
+    + "*Nome:* " +nameUser+"%0a"
+    + "*Endreço:* " +addressInput+"%0a"
+    + "*Pagamento:* " +paymentOption+"%0a";
+  window.open(message, url, '_Blank').focus();
+  
   cart = [];
   updateCartModal();
 });
