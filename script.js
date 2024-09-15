@@ -182,7 +182,7 @@ checkoutBtn.addEventListener("click", function () {
     + "*Nome:* " +nameUser+"%0a"
     + "*Endreço:* " +addressInput+"%0a"
     + "*Pagamento:* " +paymentOption+"%0a";
-  window.open(message, url, '_Blank').focus();
+  window.open(message, url, "_blank").focus();
   
   cart = [];
   updateCartModal();
